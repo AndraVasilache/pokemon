@@ -10,6 +10,8 @@
 - Clone this repo on your local machine using `https://github.com/AndraVasilache/pokemon`
 - Run in on your IDE of choice (i personally use IntelliJ)
 
+## Database model
+![database model](https://github.com/AndraVasilache/pokemon/blob/master/pokemon.jpg)
 
 ## Contact
 
