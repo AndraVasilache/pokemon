@@ -1,13 +1,11 @@
 package com.pokemon.service;
 
 import com.pokemon.model.PokemonType;
-import com.pokemon.model.Trainer;
 import com.pokemon.repository.PokemonTypeRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.stereotype.Service;
-import org.springframework.web.bind.annotation.GetMapping;
 
 import java.util.List;
 
