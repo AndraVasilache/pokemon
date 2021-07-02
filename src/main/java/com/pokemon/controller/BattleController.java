@@ -17,6 +17,7 @@ public class BattleController {
 
     @PostMapping("/battles/create")
     public ResponseEntity<Object> create(@RequestBody Battle battle) {
+        System.out.printf(battle.toString());
         return battleService.create(battle);
     }
 

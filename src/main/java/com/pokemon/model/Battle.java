@@ -19,10 +19,8 @@ public class Battle {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private int id;
 
-    @Column(name="pokemon1_id")
-    private int Pokemon1Id;
-    @Column(name="pokemon2_id")
-    private int Pokemon2Id;
+    private int pokemon1Id;
+    private int pokemon2Id;
 
     private String arenaType;
     private Date date;
