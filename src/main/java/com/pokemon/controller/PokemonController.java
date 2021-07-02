@@ -4,10 +4,7 @@ import com.pokemon.model.Pokemon;
 import com.pokemon.service.PokemonService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.ResponseEntity;
-import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.PostMapping;
-import org.springframework.web.bind.annotation.RequestBody;
-import org.springframework.web.bind.annotation.RestController;
+import org.springframework.web.bind.annotation.*;
 
 @RestController
 public class PokemonController {
@@ -26,5 +23,10 @@ public class PokemonController {
     @GetMapping("/pokemons")
     public ResponseEntity<Object> getAll() {
         return pokemonService.getAll();
+    }
+
+    @PutMapping("/pokemons")
+    public ResponseEntity<Object> update(@RequestBody Pokemon pokemon) {
+        return pokemonService.create(pokemon);
     }
 }

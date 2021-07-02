@@ -4,10 +4,7 @@ import com.pokemon.model.Battle;
 import com.pokemon.service.BattleService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.ResponseEntity;
-import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.PostMapping;
-import org.springframework.web.bind.annotation.RequestBody;
-import org.springframework.web.bind.annotation.RestController;
+import org.springframework.web.bind.annotation.*;
 
 @RestController
 public class BattleController {
@@ -26,5 +23,10 @@ public class BattleController {
     @GetMapping("/battles")
     public ResponseEntity<Object> getAll() {
         return battleService.getAll();
+    }
+
+    @PutMapping("/battles")
+    public ResponseEntity<Object> update(@RequestBody Battle battle) {
+        return battleService.create(battle);
     }
 }
