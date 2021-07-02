@@ -4,6 +4,7 @@ import com.pokemon.model.Trainer;
 import com.pokemon.service.TrainerService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.ResponseEntity;
+import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RestController;
@@ -20,5 +21,10 @@ public class TrainerController {
     @PostMapping("/trainers/create")
     public ResponseEntity<Object> create(@RequestBody Trainer trainer) {
         return trainerService.create(trainer);
+    }
+
+    @GetMapping("/trainers")
+    public ResponseEntity<Object> getAll() {
+        return trainerService.getAll();
     }
 }

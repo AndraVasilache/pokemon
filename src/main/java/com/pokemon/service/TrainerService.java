@@ -7,6 +7,8 @@ import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.stereotype.Service;
 
+import java.util.List;
+
 @Service
 public class TrainerService {
     private final TrainerRepository trainerRepository;
@@ -19,5 +21,10 @@ public class TrainerService {
     public ResponseEntity<Object> create(Trainer trainer) {
         Trainer t = trainerRepository.save(trainer);
         return new ResponseEntity<>(t, HttpStatus.OK);
+    }
+
+    public ResponseEntity<Object> getAll() {
+        List<Trainer> trainers = trainerRepository.findAll();
+        return new ResponseEntity<>(trainers, HttpStatus.OK);
     }
 }
