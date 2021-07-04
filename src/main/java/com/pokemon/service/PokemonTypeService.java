@@ -27,4 +27,9 @@ public class PokemonTypeService {
         List<PokemonType> pokemonTypes = pokemonTypeRepository.findAll();
         return new ResponseEntity<>(pokemonTypes, HttpStatus.OK);
     }
+
+    public ResponseEntity<Object> delete(int id) {
+        Boolean response = pokemonTypeRepository.deleteById(id);
+        return new ResponseEntity<>(response, HttpStatus.OK);
+    }
 }

@@ -29,4 +29,9 @@ public class PokemonController {
     public ResponseEntity<Object> update(@RequestBody Pokemon pokemon) {
         return pokemonService.create(pokemon);
     }
+
+    @DeleteMapping("pokemons/:id")
+    public ResponseEntity<Object> delete(@RequestParam int id) {
+        return pokemonService.delete(id);
+    }
 }

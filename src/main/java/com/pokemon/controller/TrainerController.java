@@ -29,4 +29,9 @@ public class TrainerController {
     public ResponseEntity<Object> update(@RequestBody Trainer trainer) {
         return trainerService.create(trainer);
     }
+
+    @DeleteMapping("trainers/:id")
+    public ResponseEntity<Object> delete(@RequestParam int id) {
+        return trainerService.delete(id);
+    }
 }

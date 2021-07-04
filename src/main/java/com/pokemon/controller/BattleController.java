@@ -17,7 +17,6 @@ public class BattleController {
 
     @PostMapping("/battles/create")
     public ResponseEntity<Object> create(@RequestBody Battle battle) {
-        System.out.printf(battle.toString());
         return battleService.create(battle);
     }
 
@@ -29,5 +28,10 @@ public class BattleController {
     @PutMapping("/battles")
     public ResponseEntity<Object> update(@RequestBody Battle battle) {
         return battleService.create(battle);
+    }
+
+    @DeleteMapping("battles/:id")
+    public ResponseEntity<Object> delete(@RequestParam int id) {
+        return battleService.delete(id);
     }
 }

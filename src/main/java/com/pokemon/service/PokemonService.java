@@ -29,4 +29,9 @@ public class PokemonService {
         return new ResponseEntity<>(pokemons, HttpStatus.OK);
     }
 
+    public ResponseEntity<Object> delete(int id) {
+        Boolean response = pokemonRepository.deleteById(id);
+        return new ResponseEntity<>(response, HttpStatus.OK);
+    }
+
 }

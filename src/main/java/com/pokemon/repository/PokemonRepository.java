@@ -9,4 +9,5 @@ import java.util.List;
 @Repository
 public interface PokemonRepository extends JpaRepository<Pokemon, Integer> {
     List<Pokemon> findAll();
+    Boolean deleteById(int id);
 }

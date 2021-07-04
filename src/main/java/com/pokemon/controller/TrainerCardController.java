@@ -30,4 +30,9 @@ public class TrainerCardController {
     public ResponseEntity<Object> update(@RequestBody TrainerCard trainerCard) {
         return trainerCardService.create(trainerCard);
     }
+
+    @DeleteMapping("trainers/cards/:id")
+    public ResponseEntity<Object> delete(@RequestParam int id) {
+        return trainerCardService.delete(id);
+    }
 }

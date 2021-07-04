@@ -9,4 +9,5 @@ import java.util.List;
 @Repository
 public interface TrainerCardRepository extends JpaRepository<TrainerCard, Integer> {
     List<TrainerCard> findAll();
+    Boolean deleteById(int id);
 }

@@ -27,4 +27,9 @@ public class TrainerService {
         List<Trainer> trainers = trainerRepository.findAll();
         return new ResponseEntity<>(trainers, HttpStatus.OK);
     }
+
+    public ResponseEntity<Object> delete(int id) {
+        Boolean response = trainerRepository.deleteById(id);
+        return new ResponseEntity<>(response, HttpStatus.OK);
+    }
 }

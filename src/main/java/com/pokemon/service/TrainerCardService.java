@@ -27,4 +27,9 @@ public class TrainerCardService {
         List<TrainerCard> cards = trainerCardRepository.findAll();
         return new ResponseEntity<>(cards, HttpStatus.OK);
     }
+
+    public ResponseEntity<Object> delete(int id) {
+        Boolean response = trainerCardRepository.deleteById(id);
+        return new ResponseEntity<>(response, HttpStatus.OK);
+    }
 }

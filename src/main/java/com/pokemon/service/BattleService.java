@@ -28,4 +28,9 @@ public class BattleService {
         List<Battle> battles = battleRepository.findAll();
         return new ResponseEntity<>(battles, HttpStatus.OK);
     }
+
+    public ResponseEntity<Object> delete(int id) {
+        Boolean response = battleRepository.deleteById(id);
+        return new ResponseEntity<>(response, HttpStatus.OK);
+    }
 }

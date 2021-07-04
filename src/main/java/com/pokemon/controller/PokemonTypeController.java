@@ -29,4 +29,9 @@ public class PokemonTypeController {
     public ResponseEntity<Object> update(@RequestBody PokemonType pokemonType) {
         return pokemonTypeService.create(pokemonType);
     }
+
+    @DeleteMapping("pokemons/types/:id")
+    public ResponseEntity<Object> delete(@RequestParam int id) {
+        return pokemonTypeService.delete(id);
+    }
 }
